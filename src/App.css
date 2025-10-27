@@ -1,0 +1,43 @@
+@import '~@alifd/next/dist/next.css';
+
+.App {
+  text-align: center;
+  display: flex;
+  padding: 10px;
+}
+.App-left{
+  width: 100px;
+}
+.App-right{
+  flex: 1;
+  margin-left: 10px;
+}
+.App-right-btn{
+  margin-bottom: 10px;
+  float: right;
+}
+.basic-nav .login-in {
+  margin: 0 20px;
+  color: #ffffff;
+}
+
+.basic-nav .fusion {
+  margin: 8px 20px;
+  width: 100px;
+  color: #ffffff;
+  font-size: 20px;
+}
+.basic-nav .login-in {
+  margin: 0 20px;
+  color: #ffffff;
+}
+
+.tableContainer {
+  margin: 48px;
+  position: relative;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
