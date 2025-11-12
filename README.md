@@ -1,70 +1,197 @@
-# Getting Started with Create React App
+# React TypeScript Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+一个基于 [Create React App](https://create-react-app.dev/) 的 React TypeScript 应用示例项目。使用 React Scripts 和 TypeScript 构建传统的 React 单页应用。
 
-## Available Scripts
+## 技术栈
 
-In the project directory, you can run:
+- **React**: 16.14.0
+- **TypeScript**: 4.9.5
+- **React Scripts**: 5.0.1
+- **Fusion Design**: @alifd/next 1.27.32
+- **Moment.js**: 2.30.1
+- **Testing Library**: 完整的测试工具链
 
-### `npm start`
+## 项目结构
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+react-ts-demo/
+├── src/
+│   ├── App.tsx            # 主应用组件
+│   ├── index.tsx          # 应用入口
+│   ├── index.css          # 全局样式
+│   └── components/        # React 组件
+├── public/                # 静态资源
+├── package.json           # 项目依赖配置
+├── tsconfig.json          # TypeScript 配置
+└── README.md
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 功能特性
 
-### `npm test`
+- React 16 支持
+- TypeScript 类型安全
+- Fusion Design 组件库
+- 完整的测试工具链
+- Web Vitals 性能监控
+- 热重载开发体验
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 快速开始
 
-### `npm run build`
+### 前置要求
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js 14 或更高版本
+- npm 或 yarn
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 安装和运行
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# 克隆项目
+git clone <repository-url>
+cd react-ts-demo
 
-### `npm run eject`
+# 安装依赖
+npm install
+# 或
+yarn install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# 运行开发服务器
+npm start
+# 或
+yarn start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+应用将在 `http://localhost:3000` 启动。
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 构建和测试
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+# 构建生产版本
+npm run build
 
-## Learn More
+# 运行测试
+npm test
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# 弹出配置（不推荐，除非必要）
+npm run eject
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 项目特点
 
-### Code Splitting
+### Create React App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+使用 Create React App (CRA) 作为基础：
+- 零配置设置
+- 开箱即用的工具链
+- Webpack 配置已优化
+- 生产就绪的构建
 
-### Analyzing the Bundle Size
+### TypeScript 支持
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+完整的 TypeScript 集成：
+- 类型检查
+- 自动完成
+- 重构支持
+- 编译时错误检测
 
-### Making a Progressive Web App
+### Fusion Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+集成阿里巴巴的 Fusion Design 组件库：
+- 丰富的企业级组件
+- 一致的设计语言
+- TypeScript 类型定义
 
-### Advanced Configuration
+## 开发
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 热重载
 
-### Deployment
+CRA 提供快速刷新功能，修改代码会自动更新。
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 环境变量
 
-### `npm run build` fails to minify
+支持环境变量配置：
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+# .env
+REACT_APP_API_URL=https://api.example.com
+```
+
+### 代理配置
+
+可以在 `package.json` 中配置代理：
+
+```json
+{
+  "proxy": "http://localhost:4000"
+}
+```
+
+## 测试
+
+### 运行测试
+
+```bash
+npm test
+```
+
+使用 Jest 和 React Testing Library：
+- 单元测试
+- 集成测试
+- 快照测试
+- 覆盖率报告
+
+### 测试示例
+
+```typescript
+import { render, screen } from '@testing-library/react';
+import App from './App';
+
+test('renders learn react link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});
+```
+
+## 构建和部署
+
+### 生产构建
+
+```bash
+npm run build
+```
+
+构建输出在 `build` 目录，包含：
+- 优化的 JavaScript 和 CSS
+- 代码分割
+- 资源优化
+- 源映射
+
+### 部署选项
+
+- **Netlify**: 自动部署
+- **Vercel**: 零配置部署
+- **GitHub Pages**: 静态托管
+- **AWS S3 + CloudFront**: 企业级部署
+
+## 性能优化
+
+### Web Vitals
+
+项目集成了 Web Vitals 监控：
+- Core Web Vitals 指标
+- 性能报告
+- 用户体验指标
+
+### 代码分割
+
+CRA 自动进行代码分割：
+- 路由级别的分割
+- 动态导入支持
+- 懒加载组件
+
+## 参考资源
+
+- [Create React App 文档](https://create-react-app.dev/)
+- [React 文档](https://react.dev/)
+- [TypeScript 文档](https://www.typescriptlang.org/)
+- [Fusion Design](https://fusion.design/)
